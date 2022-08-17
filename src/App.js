@@ -2,6 +2,10 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
+import Services from "./Pages/Services";
+import Products from "./Pages/Products";
+import SignUp from "./Pages/SignUp";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,10 +16,11 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
 
-          {/* <Route path="/services" component={Services} />
-          <Route path="/products" component={Products} />
-          <Route path="/sign-up" component={SignUp} /> */}
+          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/sign-up" element={<SignUp />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
